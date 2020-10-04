@@ -35,7 +35,6 @@ const Layout = ({ children }) => (
     <SiteBorder>
       <StyledContent>
         <Nav />
-        <p>I am a page layout</p>
         {children}
         <Footer />
       </StyledContent>

@@ -2,6 +2,7 @@
 gatsby/.cache/
 gatsby/public
 gatsby/node_modules
+gatsby/.env
 
 # sanity
 sanity/node_modules
