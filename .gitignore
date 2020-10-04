@@ -1,0 +1,7 @@
+# gatsby files
+gatsby/.cache/
+gatsby/public
+gatsby/node_modules
+
+# sanity
+sanity/node_modules
