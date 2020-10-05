@@ -1,36 +1,36 @@
 import { FaPepperHot as icon } from 'react-icons/fa';
 
 export default {
+  // Computer Name
   name: 'topping',
+  // visible title
   title: 'Toppings',
   type: 'document',
   icon,
-  preview: {
-    select: {
-      title: 'name',
-      vegetarian: 'vegetarian',
-    },
-    prepare: ({ title, vegetarian }) => ({
-      title: `${title} ${vegetarian ? '🥬' : ''}`,
-    }),
-  },
   fields: [
     {
       name: 'name',
-      title: 'Topping Name',
+      title: 'Pizza Name',
       type: 'string',
-      description: 'Name of the topping',
-      validation: (Rule) => Rule.required(),
+      description: 'What is the name of the topping?',
     },
     {
       name: 'vegetarian',
-      title: 'Vegetarian Topping',
+      title: 'Vegetarian',
       type: 'boolean',
-      description: 'Is this topping vegetarian?',
+      description: 'What is the name of the topping?',
       options: {
         layout: 'checkbox',
       },
-      validation: (Rule) => Rule.required(),
     },
   ],
+  preview: {
+    select: {
+      name: 'name',
+      vegetarian: 'vegetarian',
+    },
+    prepare: ({ name, vegetarian }) => ({
+      title: `${name} ${vegetarian ? '🌱' : ''}`,
+    }),
+  },
 };
