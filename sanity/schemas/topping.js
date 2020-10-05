@@ -8,10 +8,10 @@ export default {
   preview: {
     select: {
       title: 'name',
-      isVegetarian: 'isVegetarian',
+      vegetarian: 'vegetarian',
     },
-    prepare: ({ title, isVegetarian }) => ({
-      title: `${title} ${isVegetarian ? '🥬' : ''}`,
+    prepare: ({ title, vegetarian }) => ({
+      title: `${title} ${vegetarian ? '🥬' : ''}`,
     }),
   },
   fields: [
@@ -23,7 +23,7 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'isVegetarian',
+      name: 'vegetarian',
       title: 'Vegetarian Topping',
       type: 'boolean',
       description: 'Is this topping vegetarian?',
