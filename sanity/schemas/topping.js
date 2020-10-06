@@ -1,9 +1,7 @@
 import { FaPepperHot as icon } from 'react-icons/fa';
 
 export default {
-  // Computer Name
   name: 'topping',
-  // visible title
   title: 'Toppings',
   type: 'document',
   icon,

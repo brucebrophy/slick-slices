@@ -2,9 +2,7 @@ import { MdLocalPizza as icon } from 'react-icons/md';
 import PriceInput from '../components/PriceInput';
 
 export default {
-  // Computer Name
   name: 'pizza',
-  // visible title
   title: 'Pizzas',
   type: 'document',
   icon,
