@@ -38,7 +38,7 @@ const SliceMasterCard = styled.div`
 `;
 
 export const query = graphql`
-  query($skip: Int = 0, $pageSize: Int = 4) {
+  query($skip: Int = 0, $pageSize: Int = 3) {
     slicemasters: allSanityPerson(limit: $pageSize, skip: $skip) {
       totalCount
       nodes {
@@ -67,7 +67,7 @@ const SliceMastersPage = ({ data, pageContext }) => {
       <SliceMasterGrid>
         {slicemasters.map((person) => (
           <SliceMasterCard key={person.id}>
-            <Link to={`slicemasters/${person.slug.current}`}>
+            <Link to={`/slicemasters/${person.slug.current}`}>
               <h2>
                 <span className="mark">{person.name}</span>
               </h2>
