@@ -7,8 +7,10 @@ export default {
     title: `Slick Slices`,
     siteUrl: `https://gatsby.pizza`,
     description: 'The best pizza place in toronto',
+    twitter: '@slickslices',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-sanity',

@@ -3,6 +3,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Pagination from '../components/Pagination';
+import SEO from '../components/SEO';
 
 const SliceMasterGrid = styled.div`
   display: grid;
@@ -64,6 +65,7 @@ const SliceMastersPage = ({ data, pageContext }) => {
   const slicemasters = data.slicemasters.nodes;
   return (
     <>
+      <SEO title={`Slicemasters Page ${pageContext.currentPage || 1}`} />
       <SliceMasterGrid>
         {slicemasters.map((person) => (
           <SliceMasterCard key={person.id}>

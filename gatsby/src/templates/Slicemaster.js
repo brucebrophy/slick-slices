@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const PersonGrid = styled.div`
   .gatsby-image-wrapper {
@@ -31,15 +32,21 @@ export const query = graphql`
 `;
 
 const Slicemaster = ({ data }) => (
-  <PersonGrid>
-    <Img fluid={data.slicemaster.image.asset.fluid} />
-    <div>
-      <h1>
-        <span className="mark">{data.slicemaster.name}</span>
-      </h1>
-      <p>{data.slicemaster.description}</p>
-    </div>
-  </PersonGrid>
+  <>
+    <SEO
+      title={data.slicemaster.name}
+      image={data.slicemaster.image?.asset?.fluid?.src}
+    />
+    <PersonGrid>
+      <Img fluid={data.slicemaster.image.asset.fluid} />
+      <div>
+        <h1>
+          <span className="mark">{data.slicemaster.name}</span>
+        </h1>
+        <p>{data.slicemaster.description}</p>
+      </div>
+    </PersonGrid>
+  </>
 );
 
 export default Slicemaster;
